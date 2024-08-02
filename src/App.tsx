@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+const name = 'Miguel Carhuas';
+const element = <h1>Hello, {name}</h1>;
+const formatName = (user: any) => {
+  return user.firstName + ' ' + user.lastName;
+}
+
+const user = {
+  firstName: 'Miguel',
+  lastName: 'Carhuas'
+}
+
+const elementAhref=<a href="https://www.google.com">Google</a>;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    {name}
+    {element}
+    <h1>
+      Hello, {formatName(user)}!
+    </h1>
+    {elementAhref}
     </div>
   );
 }
